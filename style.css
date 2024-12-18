@@ -11,15 +11,3 @@ body {
     background-color: lightblue;
     color: white;
 }
-
-.col-2 {
-    padding: 2rem;
-    background-color: lightcoral;
-    border: 1px solid black;
-}
-
-.col-12 {
-    padding: 2rem;
-    background-color: lightcoral;
-    border: 1px solid black;
-}
