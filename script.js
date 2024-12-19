@@ -214,4 +214,7 @@ boxes.forEach((box) => {
 // *****RESET*****
 const resetBtn = document.getElementById('resetButton')
 
+resetBtn.addEventListener('click', () => {
+    localStorage.clear();
+})
 
