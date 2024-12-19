@@ -1,3 +1,4 @@
+// DATA
 const source = [
     {
         "type": "image",
@@ -125,16 +126,17 @@ const source = [
         "url": "images/dance.gif"
     }
 ];
-
-
-
+// SCRIPT
 const boxes = document.querySelectorAll('.box');
 
-// Add an onclick event listener to each box
 boxes.forEach((box) => {
-    box.setAttribute('data-bs-toggle', 'modal');      // Add data-bs-toggle attribute
+    // Attributes that gives each box modal opener feature
+    box.setAttribute('data-bs-toggle', 'modal'); 
     box.setAttribute('data-bs-target', '#exampleModal');
+
+    // On click function
     box.addEventListener('click', () => {
+        
         const body = document.querySelector('.modal-body')
         if (source[box.textContent.trim()].text) {
             body.innerHTML = `<p class="text-center p-3">${source[box.textContent.trim()].text}</p>`
