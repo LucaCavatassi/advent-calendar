@@ -160,24 +160,27 @@ for (let i = 19; i < 25; i++) {
 const boxes = document.querySelectorAll(".box");
 
 boxes.forEach((box) => {
-  // Index util
-  let index = box.textContent.trim() - 1;
-
-  // Attributes that gives each box modal opener feature
-  box.setAttribute("data-bs-toggle", "modal");
-  box.setAttribute("data-bs-target", "#exampleModal");
-  // On click function
-  box.addEventListener("click", () => {
-    const body = document.querySelector(".modal-body");
-    // If in the source the element at index has text
-    // Insert text
-    // Else insert gif
-    if (source[index].text) {
-      body.innerHTML = `<p class="text-center fs-4 text-white p-3">${source[index].text}</p>`;
-    } else if (source[index].url) {
-      body.innerHTML = `<img class="img-fluid" src='${source[index].url}'>`;
+    // Index util
+    let index = box.textContent.trim() - 1;
+    // Attributes that gives each box modal opener feature
+    box.setAttribute("data-bs-toggle", "modal");
+    box.setAttribute("data-bs-target", "#exampleModal");
+    // On click function
+    box.addEventListener("click", () => {
+        const body = document.querySelector(".modal-body");
+        // If in the source the element at index has text
+        // Insert text
+        // Else insert gif
+        if (source[index].text) {
+            body.innerHTML = `<p class="text-center fs-4 text-white p-3">${source[index].text}</p>`;
+        } else if (source[index].url) {
+            body.innerHTML = `<img class="img-fluid" src='${source[index].url}'>`;
+        }
+    });
+    // Added icon
+    box.innerHTML += `<img id="icon" class="img-fluid" src='icons/${source[index].icon}.png'>`;
+    // InnerText always return string even if number
+    if(box.innerText === "8" || box.innerText === "25") {
+        box.classList.add('specialBox')
     }
-  });
-  console.log(source[index].icon);
-  box.innerHTML += `<img id="icon" class="img-fluid" src='icons/${source[index].icon}.png'>`;
 });

@@ -30,11 +30,15 @@ header h1 {
 
 /* BOXS */
 .box {
-    background-color: #c1121f;
+    background-color: #780000;
 }
 
 #icon {
     max-height: 80px;
+}
+
+.specialBox {
+    background-color: #c1121f;
 }
 
 /* MODAL */
@@ -50,6 +54,5 @@ header h1 {
 .btn-primary:hover {
     background-color: #386641;
     border-color: #386641!important;
-    
 }
 
