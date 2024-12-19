@@ -135,22 +135,22 @@ const thirdRow = document.getElementById("thirdRow");
 const fourthRow = document.getElementById("fourthRow");
 // Dynamic numbers
 for (let i = 1; i < 7; i++) {
-    firstRow.innerHTML += `<div class="col-2 px-2">
+    firstRow.innerHTML += `<div class="col-2 p-2">
         <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 7; i < 13; i++) {
-    secondRow.innerHTML += `<div class="col-2 px-2">
+    secondRow.innerHTML += `<div class="col-2 p-2 pt-0">
         <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 13; i < 19; i++) {
-    thirdRow.innerHTML += `<div class="col-2 px-2">
+    thirdRow.innerHTML += `<div class="col-2 p-2 pt-0">
         <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 19; i < 25; i++) {
-    fourthRow.innerHTML += `<div class="col-2 px-2">
+    fourthRow.innerHTML += `<div class="col-2 p-2 pt-0">
         <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
@@ -164,7 +164,7 @@ boxes.forEach((box) => {
     let index = box.textContent.trim() - 1;
     // Attributes that gives each box modal opener feature
     box.setAttribute("data-bs-toggle", "modal");
-    box.setAttribute("data-bs-target", "#exampleModal");
+    box.setAttribute("data-bs-target", "#presentModal");
     // On click function
     box.addEventListener("click", () => {
         const body = document.querySelector(".modal-body");
@@ -189,3 +189,4 @@ boxes.forEach((box) => {
         box.classList.add('text-black')
     }
 });
+
