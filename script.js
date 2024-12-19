@@ -128,29 +128,30 @@ const source = [
 ];
 
 // SCRIPT
+// Rows
 const firstRow = document.getElementById("firstRow");
 const secondRow = document.getElementById("secondRow");
 const thirdRow = document.getElementById("thirdRow");
 const fourthRow = document.getElementById("fourthRow");
-
+// Dynamic numbers
 for (let i = 1; i < 7; i++) {
     firstRow.innerHTML += `<div class="col-2 px-2">
-    <div class="rounded py-4 text-center box fw-bold fs-2">${i}</div>
+        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 7; i < 13; i++) {
     secondRow.innerHTML += `<div class="col-2 px-2">
-    <div class="rounded py-4 text-center box fw-bold fs-2">${i}</div>
+        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 13; i < 19; i++) {
     thirdRow.innerHTML += `<div class="col-2 px-2">
-    <div class="rounded py-4 text-center box fw-bold fs-2">${i}</div>
+        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 19; i < 25; i++) {
     fourthRow.innerHTML += `<div class="col-2 px-2">
-    <div class="rounded py-4 text-center box fw-bold fs-2">${i}</div>
+        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 
@@ -168,8 +169,6 @@ boxes.forEach((box) => {
   // On click function
   box.addEventListener("click", () => {
     const body = document.querySelector(".modal-body");
-    console.log(index);
-
     // If in the source the element at index has text
     // Insert text
     // Else insert gif
@@ -180,5 +179,5 @@ boxes.forEach((box) => {
     }
   });
   console.log(source[index].icon);
-  box.innerHTML += `<img class="img-fluid" src='icons/${source[index].icon}.png'>`;
+  box.innerHTML += `<img id="icon" class="img-fluid" src='icons/${source[index].icon}.png'>`;
 });
