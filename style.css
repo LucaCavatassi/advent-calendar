@@ -29,10 +29,23 @@ header h1 {
     color: #f2e8cf;
 }
 
+/* Reset button */
 .btn-danger {
     position: absolute;
     top: 50%;
     right: 2rem;
+    background-color: #c1121f!important;
+    border-color: #c1121f!important;
+}
+
+.btn-danger:hover {
+    background-color: #780000!important;
+    border-color: #780000!important;
+}
+
+.btn-danger:active {
+    background-color: #6a994e!important;
+    border-color: #6a994e!important;
 }
 
 /* BOXS */
@@ -60,6 +73,7 @@ header h1 {
     background-color: #c1121f;
 }
 
+/* Button */
 .btn-primary {
     background-color: #6a994e;
     border-color: #6a994e!important;
