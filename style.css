@@ -56,3 +56,8 @@ header h1 {
     border-color: #386641!important;
 }
 
+.btn-primary:active {
+    background-color: #c1121f!important;
+    border-color: #c1121f!important;
+}
+

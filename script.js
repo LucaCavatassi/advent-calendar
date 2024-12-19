@@ -174,7 +174,7 @@ boxes.forEach((box) => {
         if (source[index].text) {
             body.innerHTML = `<p class="text-center fs-4 text-white p-3">${source[index].text}</p>`;
         } else if (source[index].url) {
-            body.innerHTML = `<img class="img-fluid" src='${source[index].url}'>`;
+            body.innerHTML = `<img class="img-fluid w-100" src='${source[index].url}'>`;
         }
     });
     // Added icon
