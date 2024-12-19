@@ -41,6 +41,13 @@ header h1 {
     background-color: #f2e8cf;
 }
 
+.opened {
+    background-color:#a7c957;
+}
+.openedText {
+    color: #c1121f!important;
+}
+
 /* MODAL */
 .modal-content{
     background-color: #c1121f;

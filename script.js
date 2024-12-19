@@ -167,6 +167,9 @@ boxes.forEach((box) => {
     box.setAttribute("data-bs-target", "#presentModal");
     // On click function
     box.addEventListener("click", () => {
+        box.classList.add('opened')
+        box.classList.add('openedText')
+
         const body = document.querySelector(".modal-body");
         // If in the source the element at index has text
         // Insert text
