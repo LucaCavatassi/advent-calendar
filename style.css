@@ -8,6 +8,29 @@
 /* COMMON */
 body {
     font-family: 'Livvic', Arial, Helvetica, sans-serif;
-    background-color: lightblue;
-    color: white;
+    background-color: #6a994e;
+    color: #f2e8cf;
+}
+
+header {
+    font-family: "Mountains of Christmas", Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+    color: #f2e8cf;
+}
+/* 
+c1121f Rosso 
+780000 Bordeaux
+f2e8cf White
+a7c957 Green
+6a994e dark-green 1
+386641 dark-green 2 */
+
+.box {
+    background-color: #c1121f;
+}
+
+.modal-content{
+    background-color: #c1121f;
 }

@@ -137,9 +137,9 @@ boxes.forEach((box) => {
     box.addEventListener('click', () => {
         const body = document.querySelector('.modal-body')
         if (source[box.textContent.trim()].text) {
-            body.innerHTML = `<p>${source[box.textContent.trim()].text}</p>`
+            body.innerHTML = `<p class="text-center p-3">${source[box.textContent.trim()].text}</p>`
         } else if (source[box.textContent.trim()].url) {
-            body.innerHTML = `<img src='${source[box.textContent.trim()].url}'>`
+            body.innerHTML = `<img class="img-fluid" src='${source[box.textContent.trim()].url}'>`
         }
     });
 });
