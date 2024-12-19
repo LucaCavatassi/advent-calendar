@@ -136,12 +136,17 @@ boxes.forEach((box) => {
 
     // On click function
     box.addEventListener('click', () => {
-        
         const body = document.querySelector('.modal-body')
-        if (source[box.textContent.trim()].text) {
-            body.innerHTML = `<p class="text-center p-3">${source[box.textContent.trim()].text}</p>`
-        } else if (source[box.textContent.trim()].url) {
-            body.innerHTML = `<img class="img-fluid" src='${source[box.textContent.trim()].url}'>`
+        let index = box.textContent.trim() - 1
+        console.log(index);
+        
+        // If in the source the element at index has text
+        // Insert text
+        // Else insert gif
+        if (source[index].text) {
+            body.innerHTML = `<p class="text-center p-3">${source[index].text}</p>`
+        } else if (source[index].url) {
+            body.innerHTML = `<img class="img-fluid" src='${source[index].url}'>`
         }
     });
 });
