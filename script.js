@@ -216,5 +216,6 @@ const resetBtn = document.getElementById('resetButton')
 
 resetBtn.addEventListener('click', () => {
     localStorage.clear();
+    window.location.reload();
 })
 
