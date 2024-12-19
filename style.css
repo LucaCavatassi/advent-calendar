@@ -46,4 +46,6 @@ a7c957 Green
     
 }
 
-#icon
+#icon {
+    max-height: 80px;
+}
