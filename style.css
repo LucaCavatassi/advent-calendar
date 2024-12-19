@@ -34,3 +34,14 @@ a7c957 Green
 .modal-content{
     background-color: #c1121f;
 }
+
+.btn-primary {
+    background-color: #6a994e;
+    border-color: #6a994e!important;
+}
+
+.btn-primary:hover {
+    background-color: #386641;
+    border-color: #386641!important;
+    
+}
