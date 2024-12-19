@@ -179,8 +179,13 @@ boxes.forEach((box) => {
     });
     // Added icon
     box.innerHTML += `<img id="icon" class="img-fluid" src='icons/${source[index].icon}.png'>`;
+    // If 8 december or 25 add specialBox class
     // InnerText always return string even if number
     if(box.innerText === "8" || box.innerText === "25") {
         box.classList.add('specialBox')
+    }
+    // If contains specialBox switch color
+    if(box.classList.contains('specialBox')) {
+        box.classList.add('text-black')
     }
 });
