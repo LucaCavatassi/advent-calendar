@@ -182,6 +182,10 @@ boxes.forEach((box) => {
         // Open style classes
         box.classList.add("opened");
         box.classList.add("openedText");
+        // Remove attributes for modal functionality
+        box.removeAttribute("data-bs-toggle", "modal");
+        box.removeAttribute("data-bs-target", "#presentModal")
+        
         // Add the box index to the openedBoxes array if not already added
         if (!openedBoxes.includes(index)) {
             openedBoxes.push(index);
