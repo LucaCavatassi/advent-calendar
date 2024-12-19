@@ -21,11 +21,18 @@ body {
 
 header {
     font-family: "Mountains of Christmas", Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 /* HEADER */
 header h1 {
     color: #f2e8cf;
+}
+
+.btn-danger {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
 }
 
 /* BOXS */

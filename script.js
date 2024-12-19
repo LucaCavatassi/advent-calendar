@@ -1,4 +1,4 @@
-// DATA
+// *****DATA*****
 const source = [
   {
     type: "image",
@@ -126,8 +126,9 @@ const source = [
     url: "images/dance.gif",
   },
 ];
-// SCRIPT
-// Rows
+
+// *****SCRIPT*****
+// ROWS
 const firstRow = document.getElementById("firstRow");
 const secondRow = document.getElementById("secondRow");
 const thirdRow = document.getElementById("thirdRow");
@@ -154,11 +155,12 @@ for (let i = 19; i < 25; i++) {
         </div>`;
 }
 
+// *****BOX*****
 // Retrieve the saved opened boxes from localStorage
 let openedBoxes = JSON.parse(localStorage.getItem("openedBoxes")) || [];
-// Box
+// Box selector
 const boxes = document.querySelectorAll(".box");
-
+// Boxes
 boxes.forEach((box) => {
     // Index util
     let index = box.textContent.trim() - 1;
@@ -208,3 +210,5 @@ boxes.forEach((box) => {
         box.classList.add("text-black");
     }
 });
+
+// *****RESET*****
