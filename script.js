@@ -136,22 +136,22 @@ const fourthRow = document.getElementById("fourthRow");
 // Dynamic numbers
 for (let i = 1; i < 7; i++) {
     firstRow.innerHTML += `<div class="col-2 px-2">
-        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 7; i < 13; i++) {
     secondRow.innerHTML += `<div class="col-2 px-2">
-        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 13; i < 19; i++) {
     thirdRow.innerHTML += `<div class="col-2 px-2">
-        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 for (let i = 19; i < 25; i++) {
     fourthRow.innerHTML += `<div class="col-2 px-2">
-        <div class="rounded py-4 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
     </div>`;
 }
 

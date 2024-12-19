@@ -4,6 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Palette
+c1121f Rosso 
+780000 Bordeaux
+f2e8cf White
+a7c957 Green
+6a994e dark-green 1
+386641 dark-green 2 */
 
 /* COMMON */
 body {
@@ -16,21 +23,21 @@ header {
     font-family: "Mountains of Christmas", Arial, Helvetica, sans-serif;
 }
 
+/* HEADER */
 header h1 {
     color: #f2e8cf;
 }
-/* 
-c1121f Rosso 
-780000 Bordeaux
-f2e8cf White
-a7c957 Green
-6a994e dark-green 1
-386641 dark-green 2 */
 
+/* BOXS */
 .box {
     background-color: #c1121f;
 }
 
+#icon {
+    max-height: 80px;
+}
+
+/* MODAL */
 .modal-content{
     background-color: #c1121f;
 }
@@ -46,6 +53,3 @@ a7c957 Green
     
 }
 
-#icon {
-    max-height: 80px;
-}
