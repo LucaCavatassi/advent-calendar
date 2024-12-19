@@ -126,7 +126,6 @@ const source = [
     url: "images/dance.gif",
   },
 ];
-
 // SCRIPT
 // Rows
 const firstRow = document.getElementById("firstRow");
@@ -135,24 +134,24 @@ const thirdRow = document.getElementById("thirdRow");
 const fourthRow = document.getElementById("fourthRow");
 // Dynamic numbers
 for (let i = 1; i < 7; i++) {
-  firstRow.innerHTML += `<div class="col-2 p-2">
-        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
-    </div>`;
+    firstRow.innerHTML += `<div class="col-2 p-2">
+            <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        </div>`;
 }
 for (let i = 7; i < 13; i++) {
-  secondRow.innerHTML += `<div class="col-2 p-2 pt-0">
-        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
-    </div>`;
+    secondRow.innerHTML += `<div class="col-2 p-2 pt-0">
+            <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        </div>`;
 }
 for (let i = 13; i < 19; i++) {
-  thirdRow.innerHTML += `<div class="col-2 p-2 pt-0">
-        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
-    </div>`;
+    thirdRow.innerHTML += `<div class="col-2 p-2 pt-0">
+            <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        </div>`;
 }
 for (let i = 19; i < 25; i++) {
-  fourthRow.innerHTML += `<div class="col-2 p-2 pt-0">
-        <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
-    </div>`;
+    fourthRow.innerHTML += `<div class="col-2 p-2 pt-0">
+            <div class="rounded py-3 text-center box fw-bold fs-2 d-flex flex-column-reverse align-items-center">${i}</div>
+        </div>`;
 }
 
 // Retrieve the saved opened boxes from localStorage
@@ -161,47 +160,51 @@ let openedBoxes = JSON.parse(localStorage.getItem("openedBoxes")) || [];
 const boxes = document.querySelectorAll(".box");
 
 boxes.forEach((box) => {
-  // Index util
-  let index = box.textContent.trim() - 1;
-  // Check if the box was previously opened
-  if (openedBoxes.includes(index)) {
-    box.classList.add("opened");
-    box.classList.add("openedText");
-  }
-  // Add attributes for modal functionality
-  box.setAttribute("data-bs-toggle", "modal");
-  box.setAttribute("data-bs-target", "#presentModal")
+    // Index util
+    let index = box.textContent.trim() - 1;
+    // Add attributes for modal functionality
+    box.setAttribute("data-bs-toggle", "modal");
+    box.setAttribute("data-bs-target", "#presentModal")
+    // Check if the box was previously opened
+    if (openedBoxes.includes(index)) {
+        box.classList.add("opened");
+        box.classList.add("openedText");
 
-  // On click function
-  box.addEventListener("click", () => {
-    // Open style classes
-    box.classList.add("opened");
-    box.classList.add("openedText");
-    // Add the box index to the openedBoxes array if not already added
-    if (!openedBoxes.includes(index)) {
-      openedBoxes.push(index);
-      localStorage.setItem("openedBoxes", JSON.stringify(openedBoxes));
+        // Remove attributes for modal functionality
+        box.removeAttribute("data-bs-toggle", "modal");
+        box.removeAttribute("data-bs-target", "#presentModal")
     }
 
-    const body = document.querySelector(".modal-body");
-    // If in the source the element at index has text
-    // Insert text
-    // Else insert gif
-    if (source[index].text) {
-      body.innerHTML = `<p class="text-center fs-4 text-white p-3">${source[index].text}</p>`;
-    } else if (source[index].url) {
-      body.innerHTML = `<img class="img-fluid w-100" src='${source[index].url}'>`;
+    // On click function
+    box.addEventListener("click", () => {
+        // Open style classes
+        box.classList.add("opened");
+        box.classList.add("openedText");
+        // Add the box index to the openedBoxes array if not already added
+        if (!openedBoxes.includes(index)) {
+            openedBoxes.push(index);
+            localStorage.setItem("openedBoxes", JSON.stringify(openedBoxes));
+        }
+
+        const body = document.querySelector(".modal-body");
+        // If in the source the element at index has text
+        // Insert text
+        // Else insert gif
+        if (source[index].text) {
+            body.innerHTML = `<p class="text-center fs-4 text-white p-3">${source[index].text}</p>`;
+        } else if (source[index].url) {
+            body.innerHTML = `<img class="img-fluid w-100" src='${source[index].url}'>`;
+        }
+    });
+    // Added icon
+    box.innerHTML += `<img id="icon" class="img-fluid" src='icons/${source[index].icon}.png'>`;
+    // If 8 or 25 add specialBox class
+    // InnerText always return string even if number
+    if (box.innerText === "8" || box.innerText === "25") {
+        box.classList.add("specialBox");
     }
-  });
-  // Added icon
-  box.innerHTML += `<img id="icon" class="img-fluid" src='icons/${source[index].icon}.png'>`;
-  // If 8 december or 25 add specialBox class
-  // InnerText always return string even if number
-  if (box.innerText === "8" || box.innerText === "25") {
-    box.classList.add("specialBox");
-  }
-  // If contains specialBox switch color
-  if (box.classList.contains("specialBox")) {
-    box.classList.add("text-black");
-  }
+    // If contains specialBox switch color
+    if (box.classList.contains("specialBox")) {
+        box.classList.add("text-black");
+    }
 });
