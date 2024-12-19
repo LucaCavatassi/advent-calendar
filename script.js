@@ -212,3 +212,6 @@ boxes.forEach((box) => {
 });
 
 // *****RESET*****
+const resetBtn = document.getElementById('resetButton')
+
+
